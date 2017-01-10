@@ -1,1 +1,42 @@
 #!/usr/bin/env node
+
+const main = require('../');
+const inquirer = require('inquirer');
+const colors = require('colors/safe');
+const conf = require('../config/github');
+let properties = [{
+  type: 'list',
+  name: 'language',
+  message: 'What your project language?',
+  choices: ['node', 'another']
+}, {
+  type: 'list',
+  name: 'type',
+  message: 'What your project type?',
+  choices: ['tools', 'web', 'another']
+},{
+  name: 'name',
+  type: 'input',
+  message: 'Project name'
+}, {
+  name: 'description',
+  type: 'input',
+  message: 'description'
+}, {
+  name: 'prefix',
+  type: 'input',
+  message: 'your github project prefix',
+  default: conf.user
+}];
+
+inquirer.prompt(properties).then(results => {
+  let options = {};
+  if(results.language === 'node' && results.type === 'tools'){
+    options.type = 'tool_node6'; 
+  }
+  options.name = results.name;
+  options.description = results.descriptions;
+  options.prefix = results.prefix;
+  return main(options);
+});
+

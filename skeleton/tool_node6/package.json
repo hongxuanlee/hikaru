@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "{{description}}",
   "main": "index.js",
-  "bin": {
-    "hikaru": "bin/hikaru"
-  },
   "scripts": {
     "test": "mocha test/units/**/*",
     "cov": "istanbul cover npm test",
