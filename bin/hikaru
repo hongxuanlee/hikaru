@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 const main = require('../');
 const inquirer = require('inquirer');
-const colors = require('colors/safe');
 const conf = require('../config/github');
 let properties = [{
   type: 'list',

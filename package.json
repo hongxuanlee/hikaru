@@ -1,6 +1,6 @@
 {
   "name": "hikaru",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a scaffold for kino",
   "main": "index.js",
   "bin": {
