@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/{{user}}/{{name}}.git"
+    "url": "git+ssh://git@github.com/{{prefix}}/{{name}}.git"
   },
-  "author": "hongxuanlee",
+  "author": "{{user}}",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/{{user}}/{{name}}/issues"
+    "url": "https://github.com/{{prefix}}/{{name}}/issues"
   },
-  "homepage": "https://github.com/{{user}}/{{name}}/#readme",
+  "homepage": "https://github.com/{{prefix}}/{{name}}/#readme",
   "devDependencies": {
     "chai": "*",
     "coveralls": "*",
